@@ -25,3 +25,9 @@ jobs:
     - name: docker build golang
       run: |
         docker build ./golang -t lhyangspg/golang:1.0.0
+    - name: docker push
+      run: |
+        docker push lhyangspg/csharp:1.0.0
+        docker push lhyangspg/nodejs:1.0.0
+        docker push lhyangspg/python:1.0.0
+        docker push lhyangspg/golang:1.0.0
