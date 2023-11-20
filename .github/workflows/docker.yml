@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-lates
     steps:
     - uses: actions/checkout@v2
+    - name: docker login
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build csharp
       run: |
         docker build ./c# -t lhyangspg/csharp:1.0.0
